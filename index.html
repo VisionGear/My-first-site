@@ -1,0 +1,51 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <h1 id="title">Crusades Survey Form</h1>
+    <p id="description">Answer a few questions for our crusade</p>
+    <form method="post" id="survey-form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <label id="name-label" for="name">Name<input id="name" name="name" type="text" required placeholder="Enter your name"/> </label>
+        <label id="email-label" for="email">Email<input id="email" name="email" type="email" required placeholder="Enter your Email"/></label>
+        <label id="number-label" for="number">Age<input id="number" name="age" type="number" required min=14 max=120 placeholder="Age"></label>
+        <label for="dropdown">Which status best describes you?
+          <select id="dropdown">
+            <option value="">select one</option>
+            <option value="1">Lord</option>
+            <option value="2">King</option>
+            <option value="3">Emperor</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <h2>Questions about the Crusade</h2>
+      <fieldset>
+        <p>Which European country involved in the Crusades do you like the most?</p>
+        <label for="france"><input id="france" type="radio" name="euro_country" checked value="fr" class="inline"/>France</label>
+        <label for="holy_roman_empire"><input id="holy_roman_empire" type="radio" name="euro_country" value="de" class="inline"/>Holy Roman Empire</label>
+        <label for="england"><input id="england" type="radio" name="euro_country" value="en" class="inline"/>England</label>
+      </fieldset>
+      <fieldset>
+        <p>Which games do you know about the Crusades?</p>
+        <label for="stronghold"><input id="stronghold" type="checkbox" name="game" value="stronghold" class="inline"/>Stronghold Crusader</label>
+        <label for="chivalry"><input id="chivalry" type="checkbox" name="game"
+        value="chivalry" class="inline"/>Chivalry 2</label>
+        <label for="kings"><input id="kings" type="checkbox" name="game" value="crusader_kings" class="inline"/>Crusader kings 2</label>
+      </fieldset>
+      <label for="addition">Would you like to add something? Write it here!</label>
+      <textarea id="addition" name="addition" rows="4" cols="30"></textarea>
+      <label for="terms-and-conditions">
+        <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" value="accept"/>I accept the<a href="https://www.medieval-life-and-times.info/medieval-knights/code-of-chivalry.htm?"> terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" id="submit"/>
+    </form>
+  <footer>
+    <p>No copyright. This survey is for educational purposes only.</p>
+  </footer>
+  </body>
